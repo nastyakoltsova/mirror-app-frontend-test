@@ -28,11 +28,6 @@ function Posts() {
     }, [posts, users]);
 
     useEffect(() => {
-        console.log('posts:', posts);
-        console.log('users:', users);
-    }, [posts, users]);
-
-    useEffect(() => {
         if (!settings) return;
 
         if (settings.layout.current === "grid") {
