@@ -20,9 +20,14 @@ function Posts() {
         if (!posts || !users) return [];
         return posts.map((post) => {
             const user = users.find((o) => o.id === post.userId);
+
+            if (user) { return { ...post, username: user.username }}
+
+            const randomUser = users[Math.floor(Math.random() * users.length)];
+
             return {
                 ...post,
-                username: user ? user.username : "unknown user",
+                username: randomUser.username
             };
         });
     }, [posts, users]);
