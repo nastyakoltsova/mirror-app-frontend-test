@@ -1,7 +1,12 @@
 import "normalize.css";
+import MainPage from "./Pages/MainPage/MainPage.tsx";
+import "./index.css"
 
 function App() {
-  return <h1>Hi dev!</h1>;
+
+  return (
+      <MainPage/>
+  );
 }
 
 export default App;
